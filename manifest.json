@@ -1,0 +1,24 @@
+{
+  "name": "libre",
+  "description": "Browse screenshots more easily on a particular site.",
+  "homepage_url": "https://github.com/caleywoods/libre",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "run_at" : "document_idle",
+      "js": ["after.js"],
+      "matches": [
+        "https://prnt.sc/*",
+        "http://prntscr.com/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://prnt.sc/*",
+    "http://prntscr.com/*"
+  ]
+}
